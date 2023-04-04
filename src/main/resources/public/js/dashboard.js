@@ -304,7 +304,7 @@ document.body.addEventListener("click", function (e) {
   } else if (e.target.id == "copy-referral") {
     e.target.previousElementSibling.select()
     e.target.previousElementSibling.setSelectionRange(0, 99999);
-    navigator.clipboard.writeText(location.origin + "/get-started.html?referral=" + e.target.previousElementSibling.value.replace(/\s/g, ''));
+    navigator.clipboard.writeText(location.origin + "/get-started.html?referral=" + e.target.previousElementSibling.value);
     e.target.classList.add("w3-text-green");
   }
 });
