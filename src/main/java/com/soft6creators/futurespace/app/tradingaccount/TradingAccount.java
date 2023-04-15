@@ -13,7 +13,7 @@ import com.soft6creators.futurespace.app.user.User;
 @Entity
 public class TradingAccount {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int tradingAccountId;
 	private int deposit;
 	private int balance;
