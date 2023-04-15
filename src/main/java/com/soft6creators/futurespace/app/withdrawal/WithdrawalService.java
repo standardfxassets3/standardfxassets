@@ -76,8 +76,13 @@ public class WithdrawalService {
 	public List<Withdrawal> getWithdrawalsByWithdrawalStatus(String withdrawalStatus) {
 		return (List<Withdrawal>) withdrawalRepository.findAllByWithdrawalStatus(withdrawalStatus);
 	}
+    
+        
+        public void deleteWithdrawal(int withdrawalId) {
+		withdrawalRepository.deleteById(withdrawalId);
+	}
 
-public List<Withdrawal> getWithdrawals() {
+        public List<Withdrawal> getWithdrawals() {
 		return (List<Withdrawal>) withdrawalRepository.findAll();
 	}
 
