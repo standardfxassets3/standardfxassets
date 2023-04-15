@@ -14,7 +14,7 @@ import com.soft6creators.futurespace.app.user.User;
 @Entity
 public class Account {
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int accountId;
 	@OneToOne
 	private Crypto interestPreference;
