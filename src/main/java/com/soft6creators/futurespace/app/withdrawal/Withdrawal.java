@@ -13,7 +13,7 @@ import com.soft6creators.futurespace.app.user.User;
 @Entity
 public class Withdrawal {
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int withdrawalId;
 	@ManyToOne
 	private User user;
