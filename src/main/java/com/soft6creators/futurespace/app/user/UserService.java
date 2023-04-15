@@ -40,7 +40,7 @@ public class UserService {
 			return new User();
 		}
 		String randomCode = RandomString.make(6);
-		user.setVerificationCode(randomCode);
+		//user.setVerificationCode(randomCode);
 		user.setReferralId(user.getFullName().trim() + "-" + RandomString.make(6));
 		if (user.getReferral() != null) {
 			User userReferral = userRepository.findByReferralId(user.getReferral().getReferralId());
