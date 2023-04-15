@@ -97,6 +97,6 @@ public class InvestmentService {
 		investmentRepository.deleteById(investmentId);
 	}
         public List<Investment> addInvestments(List<Investment> investments) {
-		return (List<Investment) investmentRepository.saveAll(investments);
+		return (List<Investment>) investmentRepository.saveAll(investments);
 	}
 }
