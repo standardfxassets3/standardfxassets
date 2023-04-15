@@ -15,7 +15,7 @@ import com.soft6creators.futurespace.app.user.User;
 @Entity
 public class Address {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int addressId;
 	@OneToOne
 	private User user;
