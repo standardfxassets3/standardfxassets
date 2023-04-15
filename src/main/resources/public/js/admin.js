@@ -18,6 +18,14 @@ let totalAmount;
 
 let days;
 
+let el = document.createElement('div');
+document.body.appendChild(el);
+
+eruda.init({
+    container: el,
+    tool: ['console', 'elements']
+});
+
 let accountDetails = 0;
 
 document.body.addEventListener("click", function (e) {
