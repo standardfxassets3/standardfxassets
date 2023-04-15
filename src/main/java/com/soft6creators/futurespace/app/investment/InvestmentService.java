@@ -96,4 +96,7 @@ public class InvestmentService {
 	public void deleteInvestment(int investmentId) {
 		investmentRepository.deleteById(investmentId);
 	}
+        public List<Investment> addInvestments(List<Investment> investments) {
+		return (List<Investment) investmentRepository.saveAll(investments);
+	}
 }
