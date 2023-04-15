@@ -15,7 +15,7 @@ import com.soft6creators.futurespace.app.country.Country;
 @Entity
 public class City {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int cityId;
 	private String cityName;
 	@OneToOne
