@@ -49,9 +49,15 @@ public class WithdrawalController {
 		return withdrawalService.getWithdrawalsByWithdrawalStatus(withdrawalStatus);
 	}
 
-@CrossOrigin(maxAge = 3600)
+        @CrossOrigin(maxAge = 3600)
 	@RequestMapping("/withdrawals")
 	public List<Withdrawal> getWithdrawals() {
 		return withdrawalService.getWithdrawals();
+	}
+
+        @CrossOrigin(maxAge = 3600)
+	@RequestMapping(method = RequestMethod.DELETE, value="/delete/withdrawal/{withdrawalId}")
+	public void deleteWithdrawal(@PathVariable int withdrawalId) {
+		withdrawalService.deleteWithdrawal(withdrawalId);
 	}
 }
