@@ -24,12 +24,6 @@ public class AccountController {
 	}
 
 	@CrossOrigin(maxAge = 3600)
-	@RequestMapping(method = RequestMethod.PUT, value = "/account")
-	public Account addAccount(@RequestBody Account account) {
-		return accountService.addAccount(account);
-	}
-
-	@CrossOrigin(maxAge = 3600)
 	@RequestMapping("/account/{accountId}")
 	public Optional<Account> getAccount(@PathVariable int accountId) {
 		return accountService.getAccount(accountId);
