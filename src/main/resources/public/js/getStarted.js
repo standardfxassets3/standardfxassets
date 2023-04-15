@@ -54,7 +54,7 @@ if (statusParam == "signin") {
     signInFormDesc
   );
 } else if (statusParam == "verify") {
-  changeCard(firstCard, secondCard);
+  changeCard(firstCard, thirdCard);
   startTimer();
 } else if (statusParam == "failure") {
   switchCards(
@@ -264,7 +264,7 @@ function signUp() {
       let response = JSON.parse(this.response);
       console.log(response);
       if (response.email != null) {
-        changeCard(firstCard, secondCard);
+        changeCard(firstCard, thirdCard);
         userEmail = response.email;
       } else if (response.email == null && response.referral != null) {
         document.getElementById("wrong-referral").style.display = "block";
