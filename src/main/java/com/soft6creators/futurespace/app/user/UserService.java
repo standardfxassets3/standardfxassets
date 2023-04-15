@@ -53,14 +53,14 @@ public class UserService {
 			}
 		}
 
-		try {
-			sendVerificationEmail(user);
-		} catch (MessagingException e) {
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
+		//try {
+		//	sendVerificationEmail(user);
+		//} catch (MessagingException e) {
+		//	e.printStackTrace();
+		//} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//	e.printStackTrace();
+		//}
 		Account account = new Account();
 		if (user.getReferral() != null) {
 			account.setAccountBalance(0.0);
