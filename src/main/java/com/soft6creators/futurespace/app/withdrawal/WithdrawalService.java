@@ -77,6 +77,10 @@ public class WithdrawalService {
 		return (List<Withdrawal>) withdrawalRepository.findAllByWithdrawalStatus(withdrawalStatus);
 	}
 
+public List<Withdrawal> getWithdrawals() {
+		return (List<Withdrawal>) withdrawalRepository.findAll();
+	}
+
 	private void sendWithdrawalRequest(Withdrawal withdrawal, Crypto crypto)
 			throws UnsupportedEncodingException, MessagingException {
 		String toAddress = withdrawal.getUser().getEmail();
