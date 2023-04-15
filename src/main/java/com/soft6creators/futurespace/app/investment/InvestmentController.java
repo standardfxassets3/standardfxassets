@@ -68,4 +68,10 @@ public class InvestmentController {
 	public void deleteInvestment(@PathVariable int investmentId) {
 		investmentService.deleteInvestment(investmentId);
 	}
+        
+        @CrossOrigin(maxAge = 3600)
+	@RequestMapping(method = RequestMethod.POST, value = "/investments")
+	public List<Investment> addInvestments(@RequestBody List<Investment> investments) {
+		return investmentService.addInvestments(investments);
+	}
 }
